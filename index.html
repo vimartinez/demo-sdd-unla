@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hilera</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <main class="juego">
+      <h1>Hilera</h1>
+      <p class="consigna">Alineá cuatro fichas antes que tu rival.</p>
+
+      <p id="sin-script" class="sin-script">
+        El juego no pudo cargar. Abrilo desde un servidor local, como explica el README.
+      </p>
+
+      <form id="inicio" class="inicio" autocomplete="off" novalidate>
+        <div id="inicio-jugadores" class="inicio-jugadores"></div>
+        <p id="inicio-error" class="inicio-error" role="alert"></p>
+        <button id="empezar" class="boton" type="submit">Empezar</button>
+      </form>
+
+      <section id="partida" class="partida" aria-label="Partida" hidden>
+        <p class="estado">
+          <span id="estado-ficha" class="ficha" aria-hidden="true"></span>
+          <span id="estado" class="estado-texto" aria-live="polite"></span>
+        </p>
+
+        <div id="tablero" class="tablero" role="group" aria-label="Tablero"></div>
+
+        <p id="aviso" class="aviso" aria-live="polite"></p>
+
+        <div class="acciones">
+          <button id="reiniciar" class="boton" type="button">Reiniciar</button>
+          <button id="cambiar" class="boton" type="button">Cambiar jugadores</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
